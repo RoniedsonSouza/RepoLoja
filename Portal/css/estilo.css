@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    display: block;
+    height: 35px;
+    width: 340px;
+    margin: 10px !important;
+}
+
+#corpo-form {
+    width: 350px;
+    margin: 150px auto 0 auto;
+}
+
+#msg-sucesso {
+    width: 340px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(50, 205, 50, .3);
+    border: 1px solid rgb(34, 139, 34);
+}
+
+.msg-erro {
+    width: 340px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(250, 128, 114, .3);
+    border: 1px solid rgb(165, 42, 42);
+}
