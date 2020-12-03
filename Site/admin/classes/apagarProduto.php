@@ -1,14 +1,12 @@
 <?php
 
     require_once '../produtos.php';
-    require_once 'usuarios.php';
-    $con = new Usuario;
+    require_once 'classProdutos.php';
+    $con = new Produtos;
 
     $con->conectar("projeto_login", "localhost", "root", "");
     $deletar = $pdo->prepare("DELETE FROM produtos WHERE id_produto ='$idProd'");
     $deletar->execute();
 
-    if($deletar):
-        header("Location: ../Site/admin/produtos.php");
-    endif;
+    header("Location: ../Site/admin/produtos.php");
 ?>

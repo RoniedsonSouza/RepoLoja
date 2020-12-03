@@ -1,9 +1,42 @@
+#formTableProd {
+    width: 65%;
+}
+
+.card-box,
+.da-card {
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .08);
+    box-shadow: 0 0 28px rgba(0, 0, 0, .08);
+}
+
+.height-100-p {
+    height: 100%;
+}
+
+.pd-30 {
+    padding: 30px;
+}
+
+.pd-20 {
+    padding: 20px;
+}
+
+.device-manage-progress-chart ul li,
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.widget-style1 {
+    padding: 10px;
+}
+
+.height-100-p {
+    height: 100%;
+}
+
 #formNovoProd {
-    flex-basis: unset;
-    flex-direction: inherit;
-    flex-flow: wrap;
-    align-items: center;
-    width: 776px;
+    margin-bottom: 0;
 }
 
 @keyframes hiden {
@@ -32,25 +65,22 @@
 
 input[type="submit"] {
     margin: 0 0 0 auto;
-    transform: translate(353px);
+    transform: translate(620px);
 }
 
 textarea {
     resize: none;
-    width: 23.8%;
+    width: 11.4em;
 }
 
 select {
-    width: 23.8%;
+    width: 82%;
     padding: 3px 0;
 }
 
 input[type='submit'] {
+    margin-top: 1.5em !important;
     padding: 5px 18px;
-}
-
-#formNovoProd label {
-    width: 9em;
 }
 
 #formNovoProd input {
@@ -110,6 +140,7 @@ input[type='submit'] {
 
 body {
     font-size: 0.9rem;
+    background-color: #dededeb3 !important;
 }
 
 .page-wrapper .sidebar-wrapper,

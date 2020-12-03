@@ -122,6 +122,10 @@ ol {
     text-align: center;
 }
 
+.single-banner{
+  cursor: pointer;
+}
+
 .section-title .product-price {
     font-size: 24px;
     font-weight: 700;
