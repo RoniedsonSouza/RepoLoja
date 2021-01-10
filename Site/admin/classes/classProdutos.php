@@ -38,6 +38,16 @@ class Produtos
             $sql->execute();
             return true;
     }
+
+    // public function cadCbMostra($idProd, $cbMostraSite)
+    // {
+    //     global $pdo;
+
+    //         $sql = $pdo->prepare("UPDATE produtos set cb_mostraSite = ':c' where id_produto = '$idProd'");
+    //         $sql->bindValue(":c",$cbMostraSite);
+    //         $sql->execute();
+    //         return true;
+    // }
 }
 
 

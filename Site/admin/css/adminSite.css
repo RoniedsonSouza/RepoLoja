@@ -1,5 +1,5 @@
-#formTableProd {
-    width: 65%;
+.page-link {
+    color: black !important;
 }
 
 .card-box,
@@ -35,8 +35,20 @@
     height: 100%;
 }
 
+#dvBtnsEditProd {
+    width: fit-content;
+    clear: both;
+    display: flow-root;
+}
+
 #formNovoProd {
     margin-bottom: 0;
+    margin: 0 auto;
+}
+
+#formEditProd {
+    margin-bottom: 0;
+    margin: 0 auto;
 }
 
 @keyframes hiden {
@@ -63,11 +75,6 @@
     text-align: center;
 }
 
-input[type="submit"] {
-    margin: 0 0 0 auto;
-    transform: translate(620px);
-}
-
 textarea {
     resize: none;
     width: 11.4em;
@@ -81,10 +88,6 @@ select {
 input[type='submit'] {
     margin-top: 1.5em !important;
     padding: 5px 18px;
-}
-
-#formNovoProd input {
-    margin: 3px;
 }
 
 #produtos {
@@ -384,7 +387,7 @@ body {
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
-    content: "\f111";
+    /* content: "\f111"; */
     font-family: "Font Awesome 5 Free";
     font-weight: 400;
     font-style: normal;
@@ -605,4 +608,10 @@ body {
 
 .chiller-theme .sidebar-footer>a:last-child {
     border-right: none;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 700px !important;
+    }
 }

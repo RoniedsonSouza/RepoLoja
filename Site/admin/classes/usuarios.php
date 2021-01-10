@@ -65,6 +65,32 @@ class Usuario
             return false;
         }
     }
+
+    public function editar($id, $nome, $telefone, $login, $senha)
+    {
+        global $pdo;
+
+        //verificar se ja exite o cadastro
+        $sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE login = :l");
+        $sql->bindValue(":l",$login);
+        $sql->execute();
+        if($sql->rowCount() > 1)
+        {
+            return false;
+        }
+        //caso não, cadastrar
+        else
+        {
+        //atualiza CADASTRO
+            $sql = $pdo->prepare("UPDATE usuarios (nome, telefone, login, senha) VALUES (:n, :t, :l, :s) WHERE id_usuario = '$id'");
+            $sql->bindValue(":n",$nome);
+            $sql->bindValue(":t",$telefone);
+            $sql->bindValue(":l",$login);
+            $sql->bindValue(":s",md5($senha));
+            $sql->execute();
+            return true;
+        }
+    }
 }
 
 

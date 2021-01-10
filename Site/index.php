@@ -1,5 +1,9 @@
 <?php
+$conn = mysqli_connect("localhost", "root", "");
+mysqli_select_db($conn, "projeto_login");
 
+$queryDestMulheres = "SELECT * FROM produtos WHERE fl_categoria = 2 AND cb_destaque = 1";
+$execQueryDestF = mysqli_query($conn, $queryDestMulheres);
 ?>
 <html lang="pt-br">
 
@@ -130,6 +134,7 @@
                         </ul>
                     </div>
                     <div class="product-slider owl-carousel">
+                    <?php while($destMulheres = mysqli_fetch_array($execQueryDestF)){?>
                         <div class="product-item">
                             <div class="pi-pic">
                                 <img src="img/products/women-1.jpg" alt="">
@@ -144,16 +149,38 @@
                                 </ul>
                             </div>
                             <div class="pi-text">
-                                <div class="catagory-name">Casaco</div>
+                                <div class="catagory-name"><?php
+                                        switch ($destMulheres['tipo_prod']) {
+                                            case 1:
+                                            echo "Camisa";
+                                            break;
+                                            case 2:
+                                            echo "Calça";
+                                            break;
+                                            case 3:
+                                            echo "Short";
+                                            break;
+                                            case 4:
+                                            echo "Acessorio";
+                                            break;
+                                            case 5:
+                                            echo "Sapato";
+                                            break;
+                                            case 6:
+                                            echo "Moleton";
+                                            break;
+                                        }
+                                        ?></div>
                                 <a href="#">
-                                    <h5>Abacaxi puro</h5>
+                                    <h5><?php echo $destMulheres['nome_prod'] ?></h5>
                                 </a>
                                 <div class="product-price">
-                                    R$14.00
+                                    R$<?php echo number_format($destMulheres['valor_prod'], 2, ",", "."); ?>
                                     <span>R$35.00</span>
                                 </div>
                             </div>
                         </div>
+                        <?php } ?>
                         <!-- <div class="product-item">
                             <div class="pi-pic">
                                 <img src="img/products/women-2.jpg" alt="">
